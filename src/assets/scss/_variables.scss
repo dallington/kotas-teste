@@ -1,0 +1,27 @@
+$fontFamily: 'Mulish', sans-serif;
+$fontFamilySec:  'Quicksand', sans-serif;
+
+$color-primary: #01B1EC;
+$color-dark-gray: #141728;
+$color-gray: #616161;
+$color-success: #26B36A;
+$color-error: #d00000;
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 1024px;
+
+// Large tablets and desktops
+$screen-xl-min: 1280px;
+
+$breakpoints: (
+    'sm': $screen-sm-min,
+    'md': $screen-md-min,
+    'lg': $screen-lg-min,
+    'xl': $screen-xl-min,
+  )

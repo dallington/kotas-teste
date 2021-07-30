@@ -1,0 +1,45 @@
+// Breakpoints 
+// Small devices
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+
+//  Generate Text and Background Helpers 
+
+ // Background class definition
+@mixin bg{
+    .bg-#{$color}{
+        background: $color;
+    }
+}
+  
+// Text class definition
+@mixin text{
+    .text-#{$name}{
+        color: $color;
+    }
+}
+  

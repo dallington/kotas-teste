@@ -1,0 +1,60 @@
+@import 'variables';
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+// Text and BG colors
+$colors: (
+  'primary': $color-primary,
+  'gray': $color-gray,
+  'dark-gray': $color-dark-gray,
+  'black': #000,
+  'white': #fff,
+  'success': $color-success
+);
+
+@each $name, $color in $colors {
+
+    .text-#{$name} {
+    color: $color;
+    }
+
+}
+
+// Display 
+
+$display: (
+  'hidden': none,
+  'block': block,
+  'inline-block': inline-block,
+  'inline': inline,
+  'flex': flex,
+  'inline-flex': inline-flex,
+  'grid': grid,
+  'inline-grid': inline-grid,
+  
+) !default;
+
+@mixin props($prop, $name, $value, $pre_name: '') {
+    $className: null;
+    @if $pre_name {
+        $className: #{$pre_name}#{$name};
+    }
+    @else {
+        $className: #{$name}
+    }
+   .#{$className} {
+       #{$prop}: $value
+   }
+ }
+ 
+@each $name, $value in $display {
+    @include props(display, $name, $value);
+    @each $bk, $size in $breakpoints {
+        @media (min-width: #{$size})
+        {
+            @include props(display, $name, $value, #{#{$bk}#{\:}});
+        }
+    }
+}

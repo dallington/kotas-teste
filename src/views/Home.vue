@@ -275,7 +275,6 @@ export default {
 }
 @include md {
   .nav-sticky {
-    background: #fff;
     position: sticky;
     top: 20px;
   }

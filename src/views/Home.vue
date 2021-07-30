@@ -209,7 +209,7 @@ import IconInformation from '@assets/svgs/information.svg'
 import IconLink from '@assets/svgs/link.svg'
 
 import ImageJoao from '@assets/images/profile-joao.jpg'
-import ImageMaria from '@assets/images/profile-Maria.jpg'
+import ImageMaria from '@assets/images/profile-maria.jpg'
 import ImageFilipe from '@assets/images/profile-filipe.jpg'
 import ImageAna from '@assets/images/profile-ana.jpg'
 
